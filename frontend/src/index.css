@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  scrollbar-width: thin;  
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.dark body {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+.home-banner {
+  margin-top: -4rem;
+  background-image: url('./Assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.weather-banner {
+  background-image: url('./Assets/Weather.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+::-webkit-scrollbar {
+  width: 3px; 
+  height: 3px;  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6bc83f; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #444;
+  border-radius: 10px;  
+}
+
+@keyframes leaf-fall {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(-15px) translateY(50px) rotate(-15deg);
+  }
+  50% {
+    transform: translateX(15px) translateY(100px) rotate(15deg);
+  }
+  75% {
+    transform: translateX(-15px) translateY(150px) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) translateY(200px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.animate-leaf-fall {
+  animation: leaf-fall 10s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.6s ease-in-out forwards;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+.hover\:pause-marquee:hover {
+  animation-play-state: paused;
+}
+
+
